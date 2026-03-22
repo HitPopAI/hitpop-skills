@@ -5,7 +5,7 @@
 One toolkit to generate, edit, voice, subtitle, and publish videos — all from your terminal.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-13-blue.svg)](#skills)
+[![Skills](https://img.shields.io/badge/skills-15-blue.svg)](#skills)
 [![OpenClaw](https://img.shields.io/badge/OpenClaw-compatible-orange.svg)](https://docs.openclaw.ai/tools/skills)
 
 ---
@@ -35,6 +35,8 @@ Hitpop Skills is a collection of 10 OpenClaw-compatible AI skills that cover the
 | `hitpop-json2video` | 📋 JSON-to-video with text animations + TTS | JSON2Video API | Free tier |
 | `hitpop-creatomate` | 🎨 Template video automation at scale | Creatomate API | Free trial |
 | `hitpop-twick` | 🎛️ Interactive React video editor SDK | Twick (OSS) | Free |
+| `hitpop-comfyui` | 🖥️ Local open-source AI generation (Flux, Wan2.1) | ComfyUI | Free (local GPU) |
+| `hitpop-pipeline` | 🔗 Multi-step workflow orchestration via JSON | All skills | Free |
 
 ## Quick Start
 
@@ -97,10 +99,12 @@ Generate  Process    Enhance       Distribute
   ├ rendervid  │          ├ music       │
   ├ shotstack  │          │             │
   ├ json2video │          │             │
-  └ creatomate │          │             │
+  ├ creatomate │          │             │
+  └ comfyui    │          │             │
   │         │          │              │
   ▼         ▼          ▼              ▼
 Zhipu API  FFmpeg   Whisper/TTS   Platform APIs
++ ComfyUI
 ```
 
 ## API Backends
@@ -200,6 +204,10 @@ hitpop-skills/
 │   └── SKILL.md          # Creatomate template automation
 └── hitpop-twick/
     └── SKILL.md          # React video editor SDK
+├── hitpop-comfyui/
+│   └── SKILL.md          # Local ComfyUI open-source models
+└── hitpop-pipeline/
+    └── SKILL.md          # JSON workflow orchestration
 ```
 
 ## Contributing
@@ -214,8 +222,11 @@ hitpop-skills/
 - [x] `hitpop-twick` — React video editor SDK integration
 - [x] `hitpop-json2video` — JSON2Video API integration
 - [x] `hitpop-creatomate` — Creatomate template rendering
+- [x] `hitpop-comfyui` — Local open-source model generation
+- [x] `hitpop-pipeline` — JSON workflow orchestration
 - [ ] `hitpop-translate` — Multi-language video localization
 - [ ] `hitpop-avatar` — AI talking head / digital human
+- [ ] Visual pipeline editor (canvas UI)
 - [ ] Publish all skills to ClawHub
 
 ## License
