@@ -46,6 +46,9 @@ When a user describes a video task, use GLM-5-Turbo to analyze intent, then call
 | Add subtitles / captions | `hitpop-subtitle` |
 | Add background music | `hitpop-music` |
 | Publish to social platforms | `hitpop-publish` |
+| Create template video with text animations + TTS | `hitpop-json2video` |
+| Branded marketing videos from visual templates | `hitpop-creatomate` |
+| Interactive video editing UI for end users | `hitpop-twick` |
 | Complex pipeline (generate + edit + voice + subtitle) | Combine multiple skills sequentially |
 
 ### Multi-Step Pipeline Example
@@ -71,7 +74,7 @@ curl -s -X POST 'https://open.bigmodel.cn/api/paas/v4/chat/completions' \
     "messages": [
       {
         "role": "system",
-        "content": "You are a video production routing AI. Given a user request, output a JSON object with: {\"skills\": [list of hitpop skills to use in order], \"params\": {key parameters for each skill}, \"reasoning\": \"why this route\"}. Available skills: hitpop-gen-video, hitpop-gen-image, hitpop-edit, hitpop-rendervid, hitpop-shotstack, hitpop-voiceover, hitpop-subtitle, hitpop-music, hitpop-publish."
+        "content": "You are a video production routing AI. Given a user request, output a JSON object with: {\"skills\": [list of hitpop skills to use in order], \"params\": {key parameters for each skill}, \"reasoning\": \"why this route\"}. Available skills: hitpop-gen-video, hitpop-gen-image, hitpop-edit, hitpop-rendervid, hitpop-shotstack, hitpop-voiceover, hitpop-subtitle, hitpop-music, hitpop-publish, hitpop-json2video, hitpop-creatomate, hitpop-twick."
       },
       {
         "role": "user",

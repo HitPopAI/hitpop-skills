@@ -5,7 +5,7 @@
 One toolkit to generate, edit, voice, subtitle, and publish videos — all from your terminal.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Skills](https://img.shields.io/badge/skills-10-blue.svg)](#skills)
+[![Skills](https://img.shields.io/badge/skills-13-blue.svg)](#skills)
 [![OpenClaw](https://img.shields.io/badge/OpenClaw-compatible-orange.svg)](https://docs.openclaw.ai/tools/skills)
 
 ---
@@ -32,6 +32,9 @@ Hitpop Skills is a collection of 10 OpenClaw-compatible AI skills that cover the
 | `hitpop-subtitle` | 💬 Auto-generate & burn subtitles | Whisper | Free (local) |
 | `hitpop-music` | 🎵 Background music & mixing | FFmpeg | Free |
 | `hitpop-publish` | 📤 Multi-platform export & upload | FFmpeg | Free |
+| `hitpop-json2video` | 📋 JSON-to-video with text animations + TTS | JSON2Video API | Free tier |
+| `hitpop-creatomate` | 🎨 Template video automation at scale | Creatomate API | Free trial |
+| `hitpop-twick` | 🎛️ Interactive React video editor SDK | Twick (OSS) | Free |
 
 ## Quick Start
 
@@ -90,9 +93,11 @@ User Request
 Generate  Process    Enhance       Distribute
   │         │          │              │
   ├ gen-video  ├ edit      ├ voiceover   ├ publish
-  ├ gen-image  │          ├ subtitle    │
+  ├ gen-image  ├ twick     ├ subtitle    │
   ├ rendervid  │          ├ music       │
-  └ shotstack  │          │             │
+  ├ shotstack  │          │             │
+  ├ json2video │          │             │
+  └ creatomate │          │             │
   │         │          │              │
   ▼         ▼          ▼              ▼
 Zhipu API  FFmpeg   Whisper/TTS   Platform APIs
@@ -158,6 +163,8 @@ hitpop-rendervid  →  hitpop-music  →  hitpop-publish
 | `ffmpeg` | edit, voiceover, subtitle, music, publish |
 | `python3` + `pip` | subtitle (whisper), voiceover (edge-tts) |
 | `SHOTSTACK_API_KEY` (optional) | shotstack |
+| `JSON2VIDEO_API_KEY` (optional) | json2video |
+| `CREATOMATE_API_KEY` (optional) | creatomate |
 | `OPENAI_API_KEY` (optional) | voiceover (premium), subtitle (API) |
 
 ## Repo Structure
@@ -185,8 +192,14 @@ hitpop-skills/
 │   └── SKILL.md          # Whisper auto-subtitles
 ├── hitpop-music/
 │   └── SKILL.md          # BGM & audio mixing
-└── hitpop-publish/
-    └── SKILL.md          # Multi-platform export
+├── hitpop-publish/
+│   └── SKILL.md          # Multi-platform export
+├── hitpop-json2video/
+│   └── SKILL.md          # JSON2Video cloud API
+├── hitpop-creatomate/
+│   └── SKILL.md          # Creatomate template automation
+└── hitpop-twick/
+    └── SKILL.md          # React video editor SDK
 ```
 
 ## Contributing
@@ -198,9 +211,9 @@ hitpop-skills/
 
 ## Roadmap
 
-- [ ] `hitpop-twick` — React video editor SDK integration
-- [ ] `hitpop-json2video` — JSON2Video API integration
-- [ ] `hitpop-creatomate` — Creatomate template rendering
+- [x] `hitpop-twick` — React video editor SDK integration
+- [x] `hitpop-json2video` — JSON2Video API integration
+- [x] `hitpop-creatomate` — Creatomate template rendering
 - [ ] `hitpop-translate` — Multi-language video localization
 - [ ] `hitpop-avatar` — AI talking head / digital human
 - [ ] Publish all skills to ClawHub
